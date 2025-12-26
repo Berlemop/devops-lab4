@@ -6,7 +6,7 @@
 
 
 crash.log
-
+.DS_Store
 
 *.tfvars
 *.tfvars.json
