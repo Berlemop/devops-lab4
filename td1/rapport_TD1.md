@@ -46,7 +46,7 @@ Ensuite on lance l'application avec $ node app.js
 
 Pour finir l'application est déployé en local sur le port 8080 donc il suffit d'ouvrir dans le navigateur http://localhost:8080 pour voir le résultat. 
 
-![Résultat app local](static\img\td1\screen_local.png)
+![Résultat app local](..\static\img\td1\screen_local.png)
 
 ## 3. Déploiement via une plateforme PaaS (Render)
 
