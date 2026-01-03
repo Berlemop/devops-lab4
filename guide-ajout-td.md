@@ -6,11 +6,25 @@ title: "Guide : Ajouter un nouveau TD"
 
 Ce guide explique comment ajouter un nouveau compte-rendu de TD (Travaux Dirigés) sur ce site.
 
+## Prérequis (Première fois uniquement)
+
+Si vous n'avez jamais utilisé ce projet sur votre machine, vous devez d'abord vous authentifier pour pouvoir déployer :
+
+1.  Ouvrez un terminal à la racine du projet.
+2.  Lancez la commande :
+    ```bash
+    make site/setup
+    ```
+3.  Le script vous demandera de vous connecter à GitHub et Cloudflare. Suivez les instructions qui s'affichent (connexion via le navigateur).
+
+> **Important** : Cette étape n'est nécessaire qu'une seule fois. Ensuite, vous pourrez utiliser `make site/update` autant de fois que vous le souhaitez.
+
 ## 1. Créer le fichier Markdown
 
-Créez un nouveau fichier `.md` dans le dossier correspondant à votre matière :
+Une fois le setup terminé, créez un nouveau fichier `.md` dans le dossier correspondant à votre matière :
 
 - **DevOps** : `devops/devops-content/mon-td.md`
+- **UPM** : `devops/upm-content/mon-td.md`
 
 ### En-tête (Frontmatter)
 Chaque fichier doit commencer par un en-tête pour définir son titre :
