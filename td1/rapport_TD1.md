@@ -55,7 +55,7 @@ Docker image, etc..).
 Nous avons utilisé Render , il faut créer un compte puis "deploy a new web service" puis utilisé nous avons utilisé un github public comme code source de notre appli et choisi quelques parametres comme le nom , le chemin et la commande de départ de l'application avant de la déployer. 
 on trouve sur l'appli le lien vers notre appli déployée https://sample-app-1iyu.onrender.com .  
 
-![Résultat app PaaS](../static/img/td1/screen_PaaS.png)
+![Résultat app PaaS](/static/img/td1/screen_PaaS.png)
 
 ## 4. Déploiement via une infrastructure IaaS (AWS EC2)
 Les "infrastructure as a service" sont des moyens de déployer notre application sur un serveur avec plus de flexibilité et de controle. 
@@ -82,4 +82,4 @@ Ce script permet de déployer l’application sans connexion manuelle au serveur
 Une fois l’instance en état **Running**, l’adresse IP publique de l’instance est récupérée depuis la console AWS.  
 En accédant à l’URL suivante dans un navigateur : http://56.228.31.53/
 
-![Résultat app PaaS](..\..\static\img\td1\screen_iaaS.png)
+![Résultat app PaaS](/static/img/td1/screen_iaaS.png)
