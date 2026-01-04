@@ -91,6 +91,8 @@ Avec un curl, on a bien:
 
 ## Step 9: Update the Lambda Function
 
+![Resultats](/static/img/td3/15.png)
+
 ---
 
 Sur le dashboard des instances EC2 AWS, on retrouve toutes nos instances:
