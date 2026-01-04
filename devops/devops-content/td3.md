@@ -1,4 +1,4 @@
----
+ï»¿---
 title: "TD3 : How to Deploy Your Apps"
 ---
 >TD3 : How to Deploy Your Apps
@@ -8,14 +8,14 @@ title: "TD3 : How to Deploy Your Apps"
 # Part 1: Server Orchestration with Ansible
 
 ## Step 2: Creating EC2 Instances with Ansible
-J'ai dû changer le type d'instance en `t3.micro` car le `t2` n'est pas compris dans le Free tier.
+J'ai dÃ» changer le type d'instance en `t3.micro` car le `t2` n'est pas compris dans le Free tier.
 ![EC2 Instances](/static/img/td3/1.png)
 ## Step 4: Deploying the Sample Node.js Application
-J'ai rencontré un problème qui m'a coûté du temps pour cette étape. L'inventaire AWS EC2 génère des groupes basés sur les tags. Et quand l'inventaire génère un groupe basé sur un tag, il ajoute `_` au début du nom du groupe. Dans mon cas, mes instances ont le tag `Ansible: sample_app_instances`, donc l'inventaire génère `_sample_app_instances`. 
+J'ai rencontrÃ© un problÃ¨me qui m'a coÃ»tÃ© du temps pour cette Ã©tape. L'inventaire AWS EC2 gÃ©nÃ¨re des groupes basÃ©s sur les tags. Et quand l'inventaire gÃ©nÃ¨re un groupe basÃ© sur un tag, il ajoute `_` au dÃ©but du nom du groupe. Dans mon cas, mes instances ont le tag `Ansible: sample_app_instances`, donc l'inventaire gÃ©nÃ¨re `_sample_app_instances`. 
 
-Sauf que mon fichier `group_vars` s'appelait `sample_app_instances` sans le `_` donc mon playbook échouait. 
+Sauf que mon fichier `group_vars` s'appelait `sample_app_instances` sans le `_` donc mon playbook ï¿½chouait. 
 
-Pour corriger ça, je l'ai renommé avec un `_` au début et pareillement pour le `hosts` dans le playbook. 
+Pour corriger Ã§a, je l'ai renommÃ© avec un `_` au dÃ©but et pareillement pour le `hosts` dans le playbook. 
 
 ![Resultats](/static/img/td3/2.png)
 
@@ -28,7 +28,7 @@ On teste avec le curl:
 ![Resultats](/static/img/td3/3.png)
 
 ## Step 5: Setting Up Nginx as a Load Balancer
-J'ai rencontré la même erreur qu'avec **Node.js**. J'ai corrigé ce problème de la même manière qu'avant + il fallait adapter le template Nginx pour utiliser le dict `_sample_app_instances`.
+J'ai rencontrÃ© la mÃªme erreur qu'avec **Node.js**. J'ai corrigÃ© ce problÃ¨me de la mÃªme maniÃ¨re qu'avant + il fallait adapter le template Nginx pour utiliser le dict `_sample_app_instances`.
 
 ![Resultats](/static/img/td3/4.png)
 
@@ -45,7 +45,7 @@ L'IP est 3.142.195.42.
 # Part 2: VM Orchestration with Packer and OpenTofu
 
 ## Step 3: Deploying an Application Load Balancer (ALB)
-Après avoir tout configuré :
+AprÃ¨s avoir tout configurÃ© :
 
 ![Resultats](/static/img/td3/7.png)
 
@@ -80,7 +80,7 @@ Après avoir tout configuré :
 ![Resultats](/static/img/td3/13.png)
 
 ## Step 7: Deploy the API Gateway Configuration
-La fonction a été déployée ici :
+La fonction a Ã©tÃ© dÃ©ployÃ©e ici :
 ```
 api_endpoint = "https://e62g30eddj.execute-api.us-east-2.amazonaws.com"
 ```
@@ -95,4 +95,4 @@ Avec un curl, on a bien:
 
 Sur le dashboard des instances EC2 AWS, on retrouve toutes nos instances:
 
-![Resultats](/static/img/td3/15.png)
+![Resultats](/static/img/td3/16.png)
