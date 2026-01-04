@@ -18,7 +18,7 @@ module "iam_roles" {
   enable_iam_role_for_testing = true                            
 
   # TODO: fill in your own repo name here!
-  github_repo      = "Berlemop/devops-lab4" 
+  github_repo      = "Berlemop/devops" 
   lambda_base_name = "lambda-sample"                            
 
   enable_iam_role_for_plan  = true                                
